@@ -1,0 +1,51 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--mdc-theme-primary);
+  color: var(--mdc-theme-on-primary);
+}
+
+.logo a {
+  font-weight: 500;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: var(--mdc-theme-on-primary);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.materialButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 1.25px;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  background-color: var(--mdc-theme-on-primary);
+  color: var(--mdc-theme-primary);
+  transition: background-color 0.2s ease;
+  text-decoration: none;
+}
+
+.materialButton:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+}
+
+.createSurveyButton {
+  margin-left: 1rem;
+}
+
+@media screen and (max-width: 480px) {
+  .createSurveyButton {
+    padding: 0.5rem 0.5rem;
+  }
+}

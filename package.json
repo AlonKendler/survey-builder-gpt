@@ -1,0 +1,44 @@
+{
+  "name": "discovery-gpt",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.0",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.11.16",
+    "@mui/material": "^5.13.0",
+    "@types/node": "18.15.11",
+    "@types/react": "18.0.35",
+    "@types/react-dom": "18.0.11",
+    "@types/uuid": "^9.0.1",
+    "d3-scale-chromatic": "^3.0.0",
+    "eslint-config-next": "13.3.0",
+    "firebase": "^9.19.1",
+    "formik": "^2.2.9",
+    "module": "^1.2.5",
+    "next": "13.3.0",
+    "openai": "^3.2.1",
+    "ramda": "^0.29.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "recharts": "^2.5.0",
+    "typescript": "^4.4.4",
+    "uuid": "^9.0.0",
+    "yup": "^1.1.0"
+  },
+  "devDependencies": {
+    "@types/d3-scale-chromatic": "^3.0.0",
+    "@types/ramda": "^0.29.1",
+    "@typescript-eslint/parser": "^5.0.1",
+    "eslint": "^8.40.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "^2.5.1"
+  }
+}

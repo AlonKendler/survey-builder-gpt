@@ -1,0 +1,11 @@
+/* styles/Footer.module.css */
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background-color: #e6e6fa;
+  color: #1e90ff;
+  font-family: "Roboto", sans-serif;
+}

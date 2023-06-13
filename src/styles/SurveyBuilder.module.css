@@ -1,0 +1,232 @@
+/* styles/SurveyBuilder.module.css */
+
+.surveyContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 60px -83px);
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #333333;
+}
+
+.description {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #555;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.surveyForm {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px;
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.questionContainer {
+  margin-bottom: 1rem;
+}
+
+.question {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  white-space: break-spaces;
+}
+
+.textInput {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #d3d3d3;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.multipleChoiceOptions {
+  display: flex;
+  flex-direction: column;
+}
+
+.optionWrapper {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background-color: #f7f8fa;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.optionWrapper:hover {
+  background-color: #e6e8eb;
+}
+
+.optionWrapper input[type="radio"] {
+  display: none;
+}
+
+.optionWrapper label {
+  flex-grow: 1;
+  font-size: 1rem;
+}
+
+.optionWrapper input[type="radio"]:checked + label {
+  font-weight: 600;
+  color: #0070f3;
+}
+
+.optionWrapper input[type="radio"]:checked ~ .checkmark {
+  border-color: #0070f3;
+  background-color: #0070f3;
+}
+
+.checkmark {
+  display: inline-block;
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-left: 1rem;
+  border: 2px solid #d3d3d3;
+  border-radius: 50%;
+  background-color: #ffffff;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+  position: relative;
+}
+
+.checkmark::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0.5rem;
+  height: 0.9rem;
+  top: 45%;
+  left: 30%;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.optionWrapper input[type="radio"]:checked ~ .checkmark::after {
+  opacity: 1;
+}
+
+.errorMessage {
+  color: #ff0000;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.startButton {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #0d47a1;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.startButton:hover {
+  background-color: #0054a4;
+}
+
+.nextButton {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #0d47a1;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+  align-self: flex-end;
+  margin-top: 1rem;
+}
+
+.nextButton:hover {
+  background-color: #0054a4;
+}
+
+.finishedContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  padding: 2rem;
+}
+
+.finishedText {
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.finishedImage {
+  max-width: 100%;
+  margin-top: 2rem;
+}
+
+/* Media queries for responsive design */
+@media screen and (max-width: 768px) {
+  .surveyForm {
+    padding: 1rem;
+    border-radius: 4px;
+  }
+
+  .question {
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 1rem;
+  }
+  .title {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .surveyForm {
+    max-width: 100%;
+  }
+
+  .question {
+    font-size: 1.3rem;
+  }
+
+  .checkmark {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .checkmark::after {
+    width: 0.4rem;
+    height: 0.7rem;
+    top: 50%;
+    left: 25%;
+  }
+}

@@ -1,0 +1,40 @@
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(70vh);
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #777;
+}
+
+.loadingIndicator {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #f3f3f3, #3498db);
+  background-size: 200% 200%;
+  animation: cool-spin 2s linear infinite, cool-gradient 5s linear infinite;
+}
+
+@keyframes cool-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes cool-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

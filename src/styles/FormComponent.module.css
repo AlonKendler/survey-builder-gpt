@@ -1,0 +1,58 @@
+
+  .fieldGroup {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+  }
+  
+  .label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .input {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    margin-bottom: 0.25rem;
+    background-color: #f8f9fa;
+  }
+
+  
+  .generateButton {
+    background-color: #0d47a1;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.25rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 1rem;
+    width: 100%;
+    transition: background-color 0.3s;
+  }
+  
+  .generateButton:hover {
+    background-color: #093a85;
+  }
+  
+  .errorMessage {
+    color: #ff0000;
+    font-size: 0.9rem;
+  }
+
+  .researchObjectiesContainer {
+    display: flex;
+    margin-bottom: 16px;
+  }
+  .iconButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }  
