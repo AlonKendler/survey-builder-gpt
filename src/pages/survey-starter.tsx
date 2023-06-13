@@ -15,8 +15,7 @@ const SurveyStarter = ({ template }: SurveyStarterProps): JSX.Element => {
   const [loading, setLoading] = useState<boolean>(false);
   const router = useRouter();
 
-  console.log("[survey-starter] template", template)
-
+  console.log("[survey-starter] template", template);
 
   const handleFormSubmit = async (values: any) => {
     try {
@@ -32,18 +31,28 @@ const SurveyStarter = ({ template }: SurveyStarterProps): JSX.Element => {
       console.error("Failed to create survey session question:", e);
       setLoading(false);
     }
-  }
+  };
   if (loading) {
     return <LoadingIndicator />;
   }
 
   return (
     <div className={styles.container}>
-     { template.includeGeneratedText && <h1 className={styles.title}>{template.generatedTitle}</h1>}
-    { template.includeGeneratedDescription && <p className={styles.description}>{template.generatedDescription}</p>}
+      {template.includeGeneratedText && (
+        <h1 className={styles.title}>{template.generatedTitle}</h1>
+      )}
+      {template.includeGeneratedDescription && (
+        <p className={styles.description}>{template.generatedDescription}</p>
+      )}
 
-      <p className={styles.description}>Your feedback is important to us. Lets get started! <br /> Please enter your name and email to begin the survey:</p>
-      <FormComponent onSubmit={handleFormSubmit} includeName={template.includeName} includeEmail={template.includeEmail}/>
+      <p className={styles.description}>
+        Your feedback is important to us. Lets get started!
+      </p>
+      <FormComponent
+        onSubmit={handleFormSubmit}
+        includeName={template.includeName}
+        includeEmail={template.includeEmail}
+      />
     </div>
   );
 };
